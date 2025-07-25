@@ -1,0 +1,262 @@
+/* Tab Navigation Styles */
+.tab-container {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-nav {
+    display: flex;
+    background: linear-gradient(135deg, rgba(27, 38, 54, 0.9) 0%, rgba(20, 30, 48, 0.9) 100%);
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: rgba(228, 230, 235, 0.7);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    color: rgba(228, 230, 235, 0.9);
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.tab-btn.active {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.15);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+}
+
+.tab-count {
+    background: #4CAF50;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    min-width: 20px;
+    text-align: center;
+    margin-left: 0.5rem;
+    display: none;
+}
+
+.tab-content {
+    display: none;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 16px 16px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Output Files Styles */
+.output-files-container {
+    min-height: 300px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: #B0BEC5;
+    text-align: center;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: rgba(176, 190, 197, 0.5);
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #B0BEC5;
+}
+
+.empty-state small {
+    font-size: 0.9rem;
+    color: rgba(176, 190, 197, 0.7);
+}
+
+/* Simple File List */
+.files-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.file-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.file-item-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.file-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.file-info i {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.file-name {
+    font-weight: 500;
+    color: #E4E6EB;
+    font-size: 0.95rem;
+}
+
+.file-time {
+    color: #B0BEC5;
+    font-size: 0.8rem;
+}
+
+.file-path {
+    color: #90A4AE;
+    font-size: 0.75rem;
+    font-family: 'Courier New', monospace;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-open {
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-open:hover {
+    background: #45a049;
+}
+
+.btn-delete {
+    padding: 0.5rem 1rem;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-delete:hover {
+    background: #d32f2f;
+}
+
+/* Output Directory Styles */
+.output-directory {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.output-directory .path-display {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #B0BEC5;
+}
+
+.output-directory .path-display i {
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}

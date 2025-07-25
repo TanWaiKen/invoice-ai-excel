@@ -1,0 +1,286 @@
+/* 
+Contains component-specific styles
+Defines layout and interactive elements
+Handles specific UI components like file lists and buttons
+More frequently updated as features are added or modified 
+*/
+
+/* ===== LAYOUT COMPONENTS ===== */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header h1 {
+    margin: 0 0 10px 0;
+    color: #4CAF50;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 0;
+    color: #B0BEC5;
+    font-size: 1.1rem;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-2px);
+}
+
+.section h2 {
+    margin: 0 0 20px 0;
+    color: #4CAF50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #2196F3;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #1976D2;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn i {
+    font-size: 1.1em;
+}
+
+.btn.excel-btn {
+    background: #217346;
+}
+
+.btn.excel-btn:hover {
+    background: #1a5c38;
+}
+
+.btn.primary {
+    background: #4CAF50;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn.primary:hover:not(:disabled) {
+    background: #45a049;
+}
+
+.btn.primary:disabled {
+    background: rgba(204, 204, 204, 0.3);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ===== FILE UPLOAD COMPONENTS ===== */
+.file-upload {
+    margin: 15px 0;
+}
+
+.path-info {
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #B0BEC5;
+}
+
+.path-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    word-break: break-all;
+}
+
+.path-display.empty {
+    color: #666;
+    justify-content: center;
+    background: transparent;
+}
+
+.file-list {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.file-count {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 8px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.file-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.file-type {
+    color: #4CAF50;
+    font-size: 0.9em;
+    padding: 4px 12px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 12px;
+}
+
+/* ===== NOTIFICATION MESSAGES ===== */
+/* Success and Error Messages */
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    max-width: 400px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.success-message.detailed {
+    background: #4CAF50;
+    border: 1px solid #45a049;
+}
+
+.success-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.success-header i {
+    font-size: 1.2rem;
+}
+
+.success-details {
+    font-size: 0.9rem;
+}
+
+.success-details p {
+    margin: 0.3rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.file-link {
+    color: #e8f5e8;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    word-break: break-all;
+}
+
+.file-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+}
+
+.error-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #f44336;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    max-width: 400px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.copy-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: slideIn 0.3s ease;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+

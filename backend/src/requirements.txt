@@ -1,0 +1,23 @@
+fastapi
+uvicorn
+pandas
+openpyxl
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+fuzzywuzzy
+python-Levenshtein
+
+# Google AI
+google-generativeai
+
+# LangChain and Vector Database
+langchain
+langchain-community
+langchain-openai
+langchain-ollama
+chromadb
+sentence-transformers
+
+# Ollama integration (keep for backward compatibility)
+ollama
