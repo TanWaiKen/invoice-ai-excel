@@ -244,12 +244,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-Good Luck for coding...
-
 - **Wails** - Desktop app framework
 - **FastAPI** - Python web framework
 - **Go** - Backend language
 
 ---
 
-**Happy coding! 🎉**
+**Good Luck for coding...! 🎉**
